@@ -1,7 +1,7 @@
 <template>
     <div class="content">
-        <FormKit type="form" @submit="sendMessage">
-            <FormKit type="text" v-model="message" />
+        <FormKit class="form" type="form" @submit="sendMessage" actions-class="submit" input-class="button">
+            <FormKit type="text" v-model="message" wrapper-class="$remove:formkit-wrapper input" />
         </FormKit>
         <ul>
             <li class="messages" v-for="(msg, index) in messages" :key="index">{{ msg }}</li>
@@ -46,13 +46,43 @@ export default {
 
 <style>
 .content {
+    width: 80%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.form {
+    margin: auto;
+}
+
+.input {
+    width: 80%;
+    margin: auto;
+}
+
+.submit {
     width: fit-content;
     margin: auto;
 }
 
+.button {
+    margin: 0px;
+}
 .messages {
-    font-size: 24px;
-
+    font-size: 16px;
+    list-style-type: none;
+    width: fit-content;
+    margin: auto;
+    border: 1px;
+    border-radius: 8px;
+    padding: 8px;
+    border-style: solid;
+    background-color: rgba(233, 233, 233, 5);
+    border-color: rgb(150, 150, 150);
     font-family: sans-serif;
+}
+
+ul {
+    padding: 0px;
 }
 </style>
