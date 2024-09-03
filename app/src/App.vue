@@ -1,5 +1,6 @@
 <template>
     <div class="content">
+        <h1>Chat App</h1>
         <FormKit class="form" type="form" @submit="sendMessage" actions-class="submit" input-class="button">
             <FormKit type="text" v-model="message" wrapper-class="$remove:formkit-wrapper input" />
         </FormKit>
@@ -45,9 +46,15 @@ export default {
 </script>
 
 <style>
+h1 {
+    font-family: sans-serif;
+    width: fit-content;
+    margin: auto;
+    padding-bottom: 24px;
+}
 .content {
     width: 80%;
-    max-width: 1200px;
+    max-width: 900px;
     margin: auto;
 }
 
