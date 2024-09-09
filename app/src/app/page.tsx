@@ -2,8 +2,8 @@ import Chat from '@/components/Chat';
 
 export default function Home() {
     return (
-        <main>
+        <div className="w-full h-full">
             <Chat />
-        </main>
+        </div>
     );
 }

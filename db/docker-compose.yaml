@@ -1,0 +1,11 @@
+services:
+    db:
+        image: postgres:16
+        environment:
+            POSTGRES_PASSWORD: postgres
+            PGDATA: /data/postgres/db
+        volumes:
+            - ./db:/data/postgres
+        ports:
+            - 5432:5432
+        restart: unless-stopped
